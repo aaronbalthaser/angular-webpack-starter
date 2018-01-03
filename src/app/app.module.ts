@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 /* Module Dependencies */
+import { AppRoutingModule } from './app.routes';
 
 /* Containers */
 import { AppComponent } from './app.component';
@@ -18,7 +19,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+
+    AppRoutingModule
   ],
   declarations: [
     AppComponent

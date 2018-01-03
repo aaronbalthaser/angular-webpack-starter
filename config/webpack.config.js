@@ -7,8 +7,9 @@ module.exports = {
     main: './src/main.ts'
   },
   output: {
+    filename: '[name].js',
+    chunkFilename: '[name]-chunk.js',
     path: path.join(__dirname, "../dist/"),
-    filename: "[name].bundle.js",
   },
   resolve: {
     extensions: ['.js', '.ts', '.html']
@@ -21,7 +22,11 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     loaders: [
-      { test: /.ts$/, use: ['awesome-typescript-loader', 'angular2-template-loader'] },
+      { test: /.ts$/, use: [
+        'awesome-typescript-loader',
+        'angular-router-loader',
+        'angular2-template-loader']
+      },
       { test: /.html$/, use: 'raw-loader' }
     ]
   },
