@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+console.log('Test 1 Component - Lazy Loaded');
+
 @Component({
   selector: 'test1',
   template: `

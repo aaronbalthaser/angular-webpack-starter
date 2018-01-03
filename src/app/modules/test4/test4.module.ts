@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 
 /* Module Dependencies */
 
@@ -11,10 +11,13 @@ import { Test4Component } from './containers/test4.component/test4.component';
 /* Services */
 
 /* Routes */
+export const ROUTES: Routes = [
+  { path: '', component: Test4Component }
+];
 
 @NgModule({
   imports: [
-    CommonModule
+    RouterModule.forChild(ROUTES)
   ],
   declarations: [
     Test4Component
